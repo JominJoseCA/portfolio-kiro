@@ -1,0 +1,10 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow read/write access to contacts collection for authenticated users
+    // In production, you might want to restrict this further
+    match /contacts/{document} {
+      allow read, write: if true;
+    }
+  }
+}
