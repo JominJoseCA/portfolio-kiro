@@ -4,9 +4,9 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Jomin Jose - Full Stack Developer',
-  description: 'Portfolio of Jomin Jose - Experienced Full Stack Developer specializing in MEAN stack, React, Node.js, and modern web technologies.',
-  keywords: 'Full Stack Developer, MEAN Stack, React, Node.js, MongoDB, Express.js, Angular, Java, Adobe AEM, PostgreSQL',
+  title: 'Jomin Jose - Full Stack Web Developer',
+  description: 'Portfolio of Jomin Jose - Highly skilled Web Developer with 5+ years of experience in MEAN stack, certified in Adobe Experience Manager (AEM) and Adobe Campaign.',
+  keywords: 'Full Stack Developer, MEAN Stack, MongoDB, Express.js, Angular, Node.js, Java, Python, JavaScript, ReactJS, Flutter, Adobe AEM, Adobe Campaign, TCS, Infospica',
   author: 'Jomin Jose',
   viewport: 'width=device-width, initial-scale=1',
 }

@@ -11,7 +11,7 @@ export default function About() {
     },
     {
       icon: <Server className="w-8 h-8" />,
-      title: "Backend Development", 
+      title: "Backend Development",
       description: "Proficient in Node.js, Express.js, and RESTful API design"
     },
     {
@@ -39,15 +39,15 @@ export default function About() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-              I'm a passionate Full Stack Developer with over 5 years of experience building 
-              scalable web applications. My expertise spans the entire MEAN stack, with deep 
-              knowledge in modern frameworks and technologies.
+              I'm a highly skilled Web Developer with 5+ years of experience in the MEAN stack
+              (MongoDB, ExpressJS, Angular, NodeJS). I'm proficient in troubleshooting, debugging,
+              and maintaining scalable web applications that serve millions of users globally.
             </p>
-            
+
             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-              Based in Waterloo, Canada, I specialize in creating intuitive user experiences 
-              backed by robust server-side architecture. I'm constantly learning and adapting 
-              to new technologies to deliver cutting-edge solutions.
+              Based in Waterloo, Canada, I'm certified in Adobe Experience Manager (AEM) and Adobe Campaign,
+              demonstrating strong expertise in digital marketing technologies. I'm passionate about
+              leveraging technical expertise to deliver innovative web solutions and contribute to dynamic team projects.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-4">
@@ -56,12 +56,12 @@ export default function About() {
                 <p className="text-xl font-bold text-primary-600">5+ Years</p>
               </div>
               <div className="bg-white dark:bg-dark-100 px-4 py-2 rounded-lg shadow-sm">
-                <span className="text-sm font-medium text-gray-600 dark:text-gray-300">Projects</span>
-                <p className="text-xl font-bold text-primary-600">50+</p>
+                <span className="text-sm font-medium text-gray-600 dark:text-gray-300">Users Served</span>
+                <p className="text-xl font-bold text-primary-600">1M+</p>
               </div>
               <div className="bg-white dark:bg-dark-100 px-4 py-2 rounded-lg shadow-sm">
-                <span className="text-sm font-medium text-gray-600 dark:text-gray-300">Technologies</span>
-                <p className="text-xl font-bold text-primary-600">15+</p>
+                <span className="text-sm font-medium text-gray-600 dark:text-gray-300">Certifications</span>
+                <p className="text-xl font-bold text-primary-600">Adobe</p>
               </div>
             </div>
           </div>

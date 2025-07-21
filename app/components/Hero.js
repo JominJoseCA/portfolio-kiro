@@ -56,8 +56,8 @@ export default function Hero() {
           </div>
           
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Passionate Full Stack Developer with 5+ years of experience in MEAN stack, 
-            React, Node.js, and modern web technologies. Based in Waterloo, Canada.
+            Highly skilled Web Developer with 5+ years of experience in MEAN stack, 
+            certified in Adobe Experience Manager (AEM) and Adobe Campaign. Based in Waterloo, Canada.
           </p>
           
           <div className="flex flex-wrap justify-center gap-6 mb-12">

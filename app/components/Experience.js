@@ -5,43 +5,32 @@ import { Calendar, MapPin, Building } from 'lucide-react'
 export default function Experience() {
   const experiences = [
     {
-      title: "Senior Full Stack Developer",
-      company: "Tech Solutions Inc.",
-      location: "Toronto, Canada",
-      period: "2022 - Present",
+      title: "Web Developer",
+      company: "Tata Consultancy Services (TCS)",
+      location: "Bangalore, India",
+      period: "Jan 2019 - Mar 2023",
       description: [
-        "Led development of enterprise-level web applications using MEAN stack",
-        "Architected and implemented microservices using Node.js and Express.js",
-        "Collaborated with cross-functional teams to deliver high-quality solutions",
-        "Mentored junior developers and conducted code reviews"
+        "Optimized application performance, improving response times by up to 25% by implementing efficient API routes and database queries in the MEAN stack",
+        "Developed and deployed over 10 web applications, serving a combined user base of 1M+ globally",
+        "Reduced production issues by 40% through rigorous quality assurance tests, ensuring security, usability, and functionality",
+        "Improved user retention rates by 15% by collaborating with UX/UI teams to enhance user experiences",
+        "Mentored a team of 5 junior developers, resulting in a 20% reduction in onboarding time"
       ],
-      technologies: ["React", "Node.js", "MongoDB", "Express.js", "AWS"]
+      technologies: ["MEAN Stack", "MongoDB", "Express.js", "Angular", "Node.js", "JavaScript"]
     },
     {
-      title: "Full Stack Developer",
-      company: "Digital Innovations Ltd.",
-      location: "Waterloo, Canada", 
-      period: "2020 - 2022",
+      title: "Software Developer",
+      company: "Infospica",
+      location: "Thiruvananthapuram, India", 
+      period: "Sep 2017 - Nov 2018",
       description: [
-        "Developed responsive web applications using React and Angular",
-        "Built RESTful APIs and integrated third-party services",
-        "Implemented Adobe AEM solutions for content management",
-        "Optimized database queries and improved application performance"
+        "Increased system performance by 30% by redesigning and optimizing legacy code for web and mobile applications",
+        "Successfully delivered 5+ e-commerce solutions, generating revenue growth of $500K+ for clients",
+        "Streamlined development workflows by introducing automated CI/CD pipelines, reducing deployment times by 50%",
+        "Conducted root cause analysis of system failures, leading to a 25% reduction in downtime",
+        "Partnered with cross-functional teams to deploy 3+ mobile features, resulting in a 10% increase in app engagement"
       ],
-      technologies: ["Angular", "Java", "PostgreSQL", "Adobe AEM", "Docker"]
-    },
-    {
-      title: "Junior Web Developer",
-      company: "StartUp Ventures",
-      location: "Toronto, Canada",
-      period: "2019 - 2020", 
-      description: [
-        "Contributed to frontend development using modern JavaScript frameworks",
-        "Assisted in backend development with Node.js and Express.js",
-        "Participated in agile development processes and sprint planning",
-        "Gained experience in full-stack development lifecycle"
-      ],
-      technologies: ["JavaScript", "Node.js", "MongoDB", "HTML/CSS", "Git"]
+      technologies: ["Java", "Python", "JavaScript", "ReactJS", "Flutter", "CI/CD"]
     }
   ]
 

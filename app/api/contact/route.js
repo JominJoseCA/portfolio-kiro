@@ -4,13 +4,10 @@ export async function POST(request) {
   try {
     const body = await request.json()
     
-    // In production, this will be handled by Firebase Functions
-    // For local development, you can use the Firebase emulator
-    const apiUrl = process.env.NODE_ENV === 'production' 
-      ? '/api/contact'  // Firebase Functions will handle this
-      : 'http://localhost:5001/jomin-portfolio/us-central1/api/contact'  // Firebase emulator
+    // Use the Firebase Functions API endpoint directly
+    const functionsUrl = 'https://us-central1-jomin-portfolio.cloudfunctions.net/api/contact'
     
-    const response = await fetch(apiUrl, {
+    const response = await fetch(functionsUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
