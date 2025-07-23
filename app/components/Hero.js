@@ -91,8 +91,6 @@ export default function Hero() {
           <div className="flex items-center justify-center gap-2 text-gray-600 dark:text-gray-400 mb-12">
             <MapPin size={18} />
             <span>Waterloo, Canada</span>
-            <span className="mx-2">•</span>
-            <span>+1 (249) 989-5550</span>
           </div>
         </div>
       </div>

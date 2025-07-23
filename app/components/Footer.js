@@ -82,7 +82,6 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
             <div className="space-y-2 text-gray-300">
               <p>📧 jominjose.ca@gmail.com</p>
-              <p>📱 +1 (249) 989-5550</p>
               <p>📍 Waterloo, Canada</p>
             </div>
             <div className="mt-6">

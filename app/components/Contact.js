@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Mail, Phone, MapPin, Send, Github, Linkedin } from 'lucide-react'
+import { Mail, Phone, MapPin, Send, Github, Linkedin, CheckCircle, XCircle, X } from 'lucide-react'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -11,6 +11,7 @@ export default function Contact() {
     message: ''
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [notification, setNotification] = useState(null)
 
   const handleChange = (e) => {
     setFormData({
@@ -19,30 +20,38 @@ export default function Contact() {
     })
   }
 
+  const showNotification = (message, type) => {
+    setNotification({ message, type })
+    setTimeout(() => setNotification(null), 5000) // Auto-hide after 5 seconds
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
+
     try {
-      const response = await fetch('/api/contact', {
+      // Call Firebase Functions API directly
+      const response = await fetch('https://us-central1-jomin-portfolio.cloudfunctions.net/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
       })
-      
+
+      const data = await response.json()
+
       if (response.ok) {
-        alert('Message sent successfully!')
+        showNotification('Message sent successfully! Thank you for reaching out.', 'success')
         setFormData({ name: '', email: '', subject: '', message: '' })
       } else {
-        alert('Failed to send message. Please try again.')
+        showNotification(data.message || 'Failed to send message. Please try again.', 'error')
       }
     } catch (error) {
       console.error('Error:', error)
-      alert('Failed to send message. Please try again.')
+      showNotification('Failed to send message. Please check your connection and try again.', 'error')
     }
-    
+
     setIsSubmitting(false)
   }
 
@@ -52,12 +61,6 @@ export default function Contact() {
       title: "Email",
       value: "jominjose.ca@gmail.com",
       link: "mailto:jominjose.ca@gmail.com"
-    },
-    {
-      icon: <Phone className="w-6 h-6" />,
-      title: "Phone",
-      value: "+1 (249) 989-5550",
-      link: "tel:+12499895550"
     },
     {
       icon: <MapPin className="w-6 h-6" />,
@@ -70,6 +73,28 @@ export default function Contact() {
   return (
     <section id="contact" className="section-padding">
       <div className="container-custom">
+        {/* Notification */}
+        {notification && (
+          <div className={`fixed top-4 right-4 z-50 max-w-md p-4 rounded-lg shadow-lg transition-all duration-300 ${notification.type === 'success'
+              ? 'bg-green-500 text-white'
+              : 'bg-red-500 text-white'
+            }`}>
+            <div className="flex items-center gap-3">
+              {notification.type === 'success' ? (
+                <CheckCircle size={20} />
+              ) : (
+                <XCircle size={20} />
+              )}
+              <span className="flex-1">{notification.message}</span>
+              <button
+                onClick={() => setNotification(null)}
+                className="text-white hover:text-gray-200 transition-colors duration-200"
+              >
+                <X size={18} />
+              </button>
+            </div>
+          </div>
+        )}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Get In <span className="gradient-text">Touch</span>
@@ -84,7 +109,7 @@ export default function Contact() {
           <div>
             <h3 className="text-2xl font-bold mb-6">Let's Connect</h3>
             <p className="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-              Whether you have a project in mind, want to collaborate, or just want to say hello, 
+              Whether you have a project in mind, want to collaborate, or just want to say hello,
               I'd love to hear from you. Feel free to reach out through any of the channels below.
             </p>
 

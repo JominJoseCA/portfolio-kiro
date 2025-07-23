@@ -1,6 +1,7 @@
 'use client'
 
 import { Code, Database, Server, Smartphone } from 'lucide-react'
+import LinkedInBadge from './LinkedInBadge'
 
 export default function About() {
   const highlights = [
@@ -36,7 +37,8 @@ export default function About() {
           <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-purple-600 mx-auto mb-8"></div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        {/* Description and Stats on Left, LinkedIn Badge on Right */}
+        <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
           <div className="space-y-6">
             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
               I'm a highly skilled Web Developer with 5+ years of experience in the MEAN stack
@@ -66,18 +68,25 @@ export default function About() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {highlights.map((item, index) => (
-              <div
-                key={index}
-                className="bg-white dark:bg-dark-100 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
-              >
-                <div className="text-primary-600 mb-4">{item.icon}</div>
-                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300 text-sm">{item.description}</p>
-              </div>
-            ))}
+          <div className="flex justify-center">
+            <div className="w-full max-w-md">
+              <LinkedInBadge />
+            </div>
           </div>
+        </div>
+
+        {/* Skill Highlights Below */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {highlights.map((item, index) => (
+            <div
+              key={index}
+              className="bg-white dark:bg-dark-100 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+            >
+              <div className="text-primary-600 mb-4">{item.icon}</div>
+              <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+              <p className="text-gray-600 dark:text-gray-300 text-sm">{item.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
